@@ -1,0 +1,6 @@
+{
+  "ventas": [
+    {"vendedor": "Ana", "monto": 5000, "estado": "cerrado", "fecha": "2026-03-22"},
+    {"vendedor": "Luis", "monto": 3000, "estado": "negociación", "fecha": "2026-03-23"}
+  ]
+}

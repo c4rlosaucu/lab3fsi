@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0A0B0E] text-stone-100 antialiased font-sans;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Dark Card with subtle border matching reference image */
+.dark-card {
+  background-color: #12141A;
+  border: 1px solid #1E222C;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.dark-card:hover {
+  border-color: #272C38;
+}
+
+/* Glowing Accent Dropshadows */
+.peak-bar-glow {
+  filter: drop-shadow(0 0 12px rgba(255, 75, 0, 0.65));
+}
+
+.radial-glow {
+  filter: drop-shadow(0 0 16px rgba(255, 69, 0, 0.45));
+}
+
+.subtle-grid line {
+  stroke: rgba(255, 255, 255, 0.05);
+}

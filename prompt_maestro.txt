@@ -1,0 +1,26 @@
+Rol: Actúa como un Desarrollador Full-Stack Senior y experto en UX/UI especializado en productos SaaS B2B.
+
+Objetivo: Construir un MVP de un Dashboard de CRM para un Responsable de Ventas de una aerolínea. El objetivo no es solo mostrar datos, sino permitir la toma de decisiones rápidas sobre el rendimiento del equipo y el estado de los ingresos. Los tratos son contratos corporativos de viaje, grupos y servicios de carga.
+
+Referencia Visual (UI):
+- Utiliza la imagen adjunta como guía estricta de estilo.
+- Estilo: Minimalista, limpio, esquinas redondeadas (border-radius amplio), sombras suaves (soft shadows).
+- Paleta de colores: Fondo crema suave/hueso, tarjetas blancas, acentos en naranja/coral (para ingresos y llamadas a la acción), verde (para tendencias positivas) y azul (para elementos informativos). Tipografía Sans-serif moderna y legible (tipo Inter o Roboto).
+
+Estrategia de Datos (Mock Data):
+- IMPORTANTE: No conectar a ninguna base de datos real por ahora.
+- Debes generar un archivo de Datos Simulados (Mock Data) robusto que alimente toda la aplicación.
+- Usa la estructura de datos del archivo estructura_datos.md para crear estos objetos falsos. Genera suficientes datos (al menos 20-30 deals) para que las gráficas se vean pobladas y realistas.
+- Lógica: Los KPIs del dashboard (Ingresos Totales, Win Rate, etc.) NO deben ser texto estático. Deben ser cálculos reales basados en los datos del array de Deals. Ejemplo: Si cambio el estado de un Deal a "Won" en el código, el "Total Revenue" debe actualizarse automáticamente.
+
+Requisitos del Dashboard (Lo que debe mostrar):
+1. KPIs Superiores:
+   - Total Revenue: Suma de amount donde status = 'won'. Comparativa visual con mes anterior.
+   - Active Deals: Conteo de deals donde status = 'open'.
+   - Win Rate: % de deals ganados sobre el total de cerrados.
+   - Avg Deal Size: Promedio de valor de venta.
+2. Gráfico Principal (Barras): Ingresos por Etapa del Pipeline. Eje X: Etapas, Eje Y: Suma de dinero.
+3. Gráfico Secundario (Línea): Evolución de ventas en el tiempo.
+4. Lista/Tabla (Opcional si cabe): Top Deals recientes.
+
+Entrega: Genera el código frontend (React con Vite y Recharts) con componentes modulares. Asegúrate de que el archivo de datos (mockData.js) esté separado para que pueda editarlo fácilmente.
