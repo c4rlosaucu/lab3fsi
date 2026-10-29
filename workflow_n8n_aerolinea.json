@@ -6,7 +6,9 @@
         "httpMethod": "POST",
         "path": "9fff7a44-9593-4ee6-bb38-a88d4488b308",
         "responseMode": "responseNode",
-        "options": {}
+        "options": {
+          "allowedOrigins": "*"
+        }
       },
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.2,
@@ -21,7 +23,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $json.body.message }}",
+        "text": "={{ $json.body.message }}\n\nDatos actuales del CRM:\n{{ JSON.stringify($json.body.context) }}",
         "options": {
           "systemMessage": "Eres un agente IA de soporte para un responsable de ventas de una aerolínea. Le ayudas con la información de leads, potenciales, etc. En general de métricas del negocio."
         }
@@ -137,7 +139,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "e2845796-e7ae-44e4-a893-4f0b386b0472",
+  "versionId": "9784e4b9-1eca-4bf8-83a2-058e7f39be0a",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "a39f40c4101a338c8f47e63fce519b232d09678690d9b0928d066d613de4918f"
